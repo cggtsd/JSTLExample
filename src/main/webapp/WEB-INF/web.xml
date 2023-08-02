@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
   <display-name>JSTLExample</display-name>
+  <servlet>
+  <servlet-name>jstltag</servlet-name>
+  <jsp-file>/show_users.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>jstltag</servlet-name>
+  <url-pattern>/show_users</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  <servlet-name>jstltag1</servlet-name>
+  <jsp-file>/fun.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>jstltag1</servlet-name>
+  <url-pattern>/fun</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.jsp</welcome-file>

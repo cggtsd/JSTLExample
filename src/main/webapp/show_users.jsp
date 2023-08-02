@@ -12,5 +12,41 @@
 </head>
 <body>
 <h1>All users are:</h1>
+<sql:setDataSource driver="org.postgresql.Driver" url="jdbc:postgresql://localhost:5432/register" user="postgres" password="root" var="ds"></sql:setDataSource>
+<sql:query var="rs" dataSource="${ds}">select * from users;</sql:query>
+
+<div class="container">
+<table class="table">
+<tr>
+<td>User Id</td>
+<td>User Name</td>
+<td>User Email</td>
+</tr>
+<c:forEach items="${rs.rows}" var="row">
+<tr>
+<td><c:out value="${row.id}"></c:out></td>
+<td><c:out value="${row.name}"></c:out></td>
+<td><c:out value="${row.email}"></c:out></td>
+</tr>
+</c:forEach>
+
+
+</table>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
